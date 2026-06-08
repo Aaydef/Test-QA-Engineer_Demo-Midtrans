@@ -1,14 +1,13 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    keyword.robot
+Suite Teardown   Close All Browsers
 
 *** Test Cases ***
-Open DEMO Midtrans Webite
+Buying product from midtrans until success to checkout
     Open Website Demo Midtrans
-Process to Checkout the Product
     Process to buy the product
     Fill the Shopping Cart Form
     Checkout
-Pick a payment process
     Process Payment
     Fill the OTP
